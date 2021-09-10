@@ -1,0 +1,9 @@
+{
+  "compatibilityLevel": "JAVA_8",
+  "package": "xyz.reselim.example.mixins",
+  "refmap": "mixins.example.refmap.json",
+  "mixins": [
+    "ExampleMixin"
+  ],
+  "verbose": true
+}

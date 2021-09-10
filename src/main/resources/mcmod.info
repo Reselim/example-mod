@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "example",
+    "name": "Example",
+    "description": "",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://github.com/My-Name-Is-Jeff/basic-mixin-template",
+    "updateUrl": "",
+    "authorList": ["Reselim"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
