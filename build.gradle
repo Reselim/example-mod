@@ -19,13 +19,15 @@ minecraft {
     runDir = "run"
     mappings = "stable_22"
     makeObfSourceJar = false
-    clientRunArgs += "--tweakClass org.spongepowered.asm.launch.MixinTweaker"
+    clientRunArgs += "--tweakClass gg.essential.loader.stage0.EssentialSetupTweaker"
     clientRunArgs += "--mixin mixins.example.json"
 }
 
 repositories {
     mavenCentral()
     maven { url "https://repo.spongepowered.org/repository/maven-public/" }
+    maven { url "https://repo.sk1er.club/repository/maven-public" }
+    maven { url "https://jitpack.io/" }
 }
 
 configurations {
@@ -34,7 +36,8 @@ configurations {
 }
 
 dependencies {
-    // Add dependencies here
+    packageLib "gg.essential:loader-launchwrapper:1.1.1"
+    implementation "gg.essential:essential-1.8.9-forge:1359"
 
     implementation "org.spongepowered:mixin:0.7.11-SNAPSHOT"
     packageLib("org.spongepowered:mixin:0.7.11-SNAPSHOT") {
@@ -58,7 +61,7 @@ jar {
             "ForceLoadAsMod": true,
             "MixinConfigs": "mixins.example.json",
             "ModSide": "CLIENT",
-            "TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
+            "TweakClass": "gg.essential.loader.stage0.EssentialSetupTweaker",
             "TweakOrder": "0",
     )
 
